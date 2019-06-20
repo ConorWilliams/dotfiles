@@ -1,0 +1,76 @@
+# vim: set et fenc=utf-8 ft=conf sts=4 sw=4 ts=8 tw=80 :
+#
+# Author: microfracture / https://linuxious.com
+# Updated: 2016-08-22
+
+
+# i3blocks config file
+#
+# Please see man i3blocks for a complete reference!
+# The man page is also hosted at http://vivien.github.io/i3blocks
+#
+# List of valid properties:
+#
+# align
+# color
+# background
+# border
+# command
+# full_text
+# instance
+# interval
+# label
+# min_width
+# name
+# separator
+# separator_block_width
+# short_text
+# signal
+# urgent
+
+# Global properties
+#
+# The top properties below are applied to every block, but can be overridden.
+# Each block command defaults to the script name to avoid boilerplate.
+
+# Debian
+command=~/.dotfiles/i3blocks/$BLOCK_NAME
+
+separator_block_width=15
+markup=none
+
+[volume-pulseaudio]
+command=~/.dotfiles/i3blocks/volume-pulseaudio
+interval=once
+signal=1
+
+[mediaplayer]
+command=~/.dotfiles/i3blocks/mediaplayer
+interval=1
+signal=10
+color=#b25fe8
+
+[disk]
+label=SSD
+command=~/.dotfiles/i3blocks/disk $ROOT 
+interval=30
+
+[wifi]
+label=WiFi
+instance=wlp58s0
+interval=10
+
+[ssid]
+interval=30
+command=echo "$(iw dev wlp58s0 link | grep SSID | cut -d " " -f 2-)"
+
+[battery]
+label=Charge
+interval=30
+
+[time]
+command=date "+%a, %b %_d %Y %I:%M%P"
+interval=5
+color=#54cce5
+
+
