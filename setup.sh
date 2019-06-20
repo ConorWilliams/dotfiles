@@ -23,11 +23,13 @@ git clone https://github.com/robbyrussell/oh-my-zsh.git ~/.oh-my-zsh
 git clone https://github.com/zsh-users/zsh-autosuggestions ~/.oh-my-zsh/custom/plugins/zsh-autosuggestions
 git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ~/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting
 
-chsh -s /usr/local/bin/zsh
-
 cp ~/.dotfiles/bash/.bash_profile ~/.bash_profile
 cp ~/.dotfiles/zsh/.zshrc ~/.zshrc
 cp ~/.dotfiles/X/.xinitrc ~/.xinitrc
+
+zsh
+
+chsh -s /usr/bin/zsh root
 
 # set up i3
 mkdir ~/.i3/
