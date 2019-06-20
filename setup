@@ -9,5 +9,8 @@
 
 echo 'Setting up'
 
-apt-get install i3
-apt-get install i3 ubuntu-drivers-common mesa-utils mesa-utils-extra gnupg numlockx xautolock scrot xorg xserver-xorg wget unzip wpasupplicant
+apt-get install i3 ubuntu-drivers-common mesa-utils mesa-utils-extra gnupg scrot xorg xserver-xorg wget unzip wpasupplicant
+
+wget "https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb"
+sudo dpkg -i google-chrome-stable_current_amd64.deb
+sudo apt install -f
