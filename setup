@@ -1,5 +1,10 @@
 #!/bin/bash
 
-# run sudo apt-get install git
+# run: 
+# 
+# sudo apt-get install git
+# git clone https://github.com/ConorWilliams/dotfiles ~/.dotfiles
+# cd ~/.dotfiles
+# ./setup
 
-git clone https://github.com/ConorWilliams/dotfiles ~/.dotfiles
+echo 'Setting up'
