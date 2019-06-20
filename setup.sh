@@ -9,7 +9,7 @@
 
 echo 'Setting up'
 
-HERE = ~/.dotfiles
+
 
 apt-get update
 apt-get upgrade
@@ -25,14 +25,15 @@ git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ~/.oh-my-zsh/
 
 sudo chsh -s $(which zsh)
 
-cp $HERE/zsh/.zpofile ~/.zpofile
-cp $HERE/zsh/.zshrc ~/.zshrc
-cp $HERE/X/.xinitrc ~/.xinitrc
+cp ~/.dotfiles/zsh/.zpofile ~/.zpofile
+cp ~/.dotfiles/zsh/.zshrc ~/.zshrc
+cp ~/.dotfiles/X/.xinitrc ~/.xinitrc
 
 # set up i3
 mkdir ~/.i3/
-cp  ~/.i3/config $HERE/i3/config
-cp ~/.imwheelrc $HERE/imwheelrc/.imwheelrc
+cp ~/.dotfiles/i3/config ~/.i3/config
+
+cp ~/.dot/imwheelrc/.imwheelrc ~/.imwheelrc
 
 # install chrome
 mkdir ~/downloads
