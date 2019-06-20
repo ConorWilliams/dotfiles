@@ -9,7 +9,7 @@
 
 echo 'Setting up'
 
-HERE = ~/.dotfiles
+HERE = home/conor/.dotfiles
 
 apt-get update
 apt-get upgrade
