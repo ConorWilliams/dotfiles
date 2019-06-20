@@ -9,13 +9,13 @@
 
 echo 'Setting up'
 
-HERE = home/conor/.dotfiles
+HERE = ~/.dotfiles
 
 apt-get update
 apt-get upgrade
 
 # install a bunch of stuff
-apt-get install i3 ubuntu-drivers-common mesa-utils mesa-utils-extra gnupg scrot xorg xserver-xorg wget unzip wpasupplicant fonts-hack-ttf zsh lxterminal rofi ranger i3lock redshift alsa-utils alsa alsa-tools i3blocks xbacklight cmus thunderbird blueman x11-xserver-utils arandr pulseaudio acpi atom ranger pavucontrol
+apt-get install i3 ubuntu-drivers-common mesa-utils mesa-utils-extra gnupg scrot xorg xserver-xorg wget unzip wpasupplicant fonts-hack-ttf zsh lxterminal rofi ranger i3lock redshift alsa-utils alsa-base alsa-tools i3blocks xbacklight cmus thunderbird blueman x11-xserver-utils arandr pulseaudio acpi atom ranger pavucontrol
 
 
 # set up zsh
