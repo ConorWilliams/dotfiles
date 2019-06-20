@@ -5,6 +5,9 @@
 # sudo apt-get install git
 # git clone https://github.com/ConorWilliams/dotfiles ~/.dotfiles
 # cd ~/.dotfiles
-# ./setup
+# sudo bash ./setup
 
 echo 'Setting up'
+
+apt-get install i3
+apt-get install i3 ubuntu-drivers-common mesa-utils mesa-utils-extra gnupg numlockx xautolock scrot xorg xserver-xorg wget unzip wpasupplicant
