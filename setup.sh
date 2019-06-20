@@ -25,14 +25,14 @@ git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ~/.oh-my-zsh/
 
 sudo chsh -s $(which zsh)
 
-ln -s $HERE/zsh/.zpofile ~/.zpofile
-ln -s $HERE/zsh/.zshrc ~/.zshrc
-ln -s $HERE/X/.xinitrc ~/.xinitrc
+cp $HERE/zsh/.zpofile ~/.zpofile
+cp $HERE/zsh/.zshrc ~/.zshrc
+cp $HERE/X/.xinitrc ~/.xinitrc
 
 # set up i3
 mkdir ~/.i3/
-ln -s ~/.i3/config $HERE/i3/config
-ln -s ~/.imwheelrc $HERE/imwheelrc/.imwheelrc
+cp  ~/.i3/config $HERE/i3/config
+cp ~/.imwheelrc $HERE/imwheelrc/.imwheelrc
 
 # install chrome
 mkdir ~/downloads
