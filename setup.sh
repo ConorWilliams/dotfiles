@@ -15,7 +15,7 @@ apt-get update
 apt-get upgrade
 
 # install a bunch of stuff
-apt-get install i3 ubuntu-drivers-common mesa-utils mesa-utils-extra gnupg scrot xorg xserver-xorg wget unzip wpasupplicant fonts-hack-ttf zsh lxterminal rofi ranger i3lock redshift amixer alsamixer i3blocks xbacklight cmus thunderbird blueman x11-xserver-utils arandr pulseaudio acpi atom ranger pavucontrol
+apt-get install i3 ubuntu-drivers-common mesa-utils mesa-utils-extra gnupg scrot xorg xserver-xorg wget unzip wpasupplicant fonts-hack-ttf zsh lxterminal rofi ranger i3lock redshift alsa-utils alsa alsa-tools i3blocks xbacklight cmus thunderbird blueman x11-xserver-utils arandr pulseaudio acpi atom ranger pavucontrol
 
 
 # set up zsh
@@ -25,14 +25,14 @@ git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ~/.oh-my-zsh/
 
 sudo chsh -s $(which zsh)
 
-ln $HERE/zsh/.zpofile ~/.zpofile
-ln $HERE/zsh/.zshrc ~/.zshrc
-ln $HERE/X/.xinitrc ~/.xinitrc
+ln -s $HERE/zsh/.zpofile ~/.zpofile
+ln -s $HERE/zsh/.zshrc ~/.zshrc
+ln -s $HERE/X/.xinitrc ~/.xinitrc
 
 # set up i3
 mkdir ~/.i3/
-ln ~/.i3/config $HERE/i3/config
-ln ~/.imwheelrc $HERE/imwheelrc/.imwheelrc
+ln -s ~/.i3/config $HERE/i3/config
+ln -s ~/.imwheelrc $HERE/imwheelrc/.imwheelrc
 
 # install chrome
 mkdir ~/downloads
