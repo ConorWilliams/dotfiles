@@ -13,18 +13,8 @@ set $mod Mod4
 
 # Font for window titles. Will also be used by the bar unless a different font
 # is used in the bar {} block below.
+
 font pango:Hack Regular 10
-
-# This font is widely installed, provides lots of unicode glyphs, right-to-left
-# text rendering and scalability on retina/hidpi displays (thanks to pango).
-#font pango:DejaVu Sans Mono 8
-
-# Before i3 v4.8, we used to recommend this one as the default:
-# font -misc-fixed-medium-r-normal--13-120-75-75-C-70-iso10646-1
-# The font above is very space-efficient, that is, it looks good, sharp and
-# clear in small sizes. However, its unicode glyph coverage is limited, the old
-# X core fonts rendering does not support right-to-left and this being a bitmap
-# font, it doesn’t scale on retina/hidpi displays.
 
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
@@ -35,17 +25,10 @@ bindsym $mod+Return exec --no-startup-id lxterminal
 # kill focused window
 bindsym $mod+Shift+q kill
 
-# start dmenu (a program launcher)
-# bindsym $mod+d exec dmenu_run
-bindsym $mod+d exec --no-startup-id rofi -show run -config /home/conor/.config/rofi/config
+# start rofi (a program launcher)
+bindsym $mod+d exec --no-startup-id rofi -show run -config /home/conor/.dotfiles/rofi/config
 
-# There also is the (new) i3-dmenu-desktop which only displays applications
-# shipping a .desktop file. It is a wrapper around dmenu, so you need that
-# installed
-#bindsym $mod+d exec --no-startup-id i3-dmenu-desktop
-
-bindsym $mod+q exec qutebrowser
-bindsym $mod+t exec subl
+# bindsym $mod+t exec subl
 bindsym $mod+g exec google-chrome
 bindsym $mod+o exec x-terminal-emulator --command=ranger -t ranger
 bindsym $mod+p exec scrot -q 100 -e 'mv $f ~/Pictures/Scrot/'
@@ -101,7 +84,7 @@ bindsym $mod+a focus parent
 # focus the child container
 #bindsym $mod+d focus child
 
-set $workspace1 "1 Qute"
+set $workspace1 "1 Surf"
 set $workspace2 "2 Term"
 set $workspace3 "3 Subl"
 set $workspace4 " 4 "
@@ -155,13 +138,12 @@ client.placeholder      #ffffff #ffffff #ffffff $unfocused_border  	#ffffff
 
 # reload the configuration file
 bindsym $mod+Shift+c reload
+
 # restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
 bindsym $mod+Shift+r restart
 bindsym $mod+shift+x exit
-# exit i3 (logs you out of your X session)
-#bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -b 'Yes, exit i3' 'i3-msg exit'"
 
-#exec --no-startup-id compton --config ~/.config/compton.conf --opacity-rule 85:'class_g *= "X-terminal-emulator"' -b
+
 for_window [class="^.*"] border pixel 2
 hide_edge_borders smart
 exec --no-startup-id redshift-gtk -t 6500:2300
@@ -176,7 +158,7 @@ bindsym XF86AudioLowerVolume exec --no-startup-id amixer -q -D pulse sset Master
 bindsym $mod+XF86AudioRaiseVolume  exec amixer -q -D pulse sset Master 1%+ && pkill -RTMIN+1 i3blocks 
 bindsym $mod+XF86AudioLowerVolume  exec amixer -q -D pulse sset Master 1%- && pkill -RTMIN+1 i3blocks
 
-bindsym XF86AudioMute exec amixer -q -D pulse sset Master toggle && pkill -RTMIN+1 i3blocksnn
+bindsym XF86AudioMute exec amixer -q -D pulse sset Master toggle && pkill -RTMIN+1 i3blocks
 
 # Sreen brightness controls
 bindsym XF86MonBrightnessUp exec --no-startup-id xbacklight -inc 10 # increase screen brightness
@@ -186,23 +168,16 @@ exec_always --no-startup-id feh --bg-scale /home/conor/Pictures/Wallpapers/jump.
 
 exec --no-startup-id blueman-applet
 
-
 exec --no-startup-id exec x-terminal-emulator --command=cmus -t cmus
+
 exec --no-startup-id exec thunderbird
+
+#exec --no-startup-id imwheel
 
 assign [title = "cmus"] $workspace10
 assign [class = "Thunderbird"] $workspace9
 assign [class = "Sublime_text"] $workspace3
 assign [class = "MATLAB R2018b - academic use"] $workspace8
-
-
-#exec --no-startup-id imwheel
-
-
-
-
-
-
 
 # Power menu
 set $sysmenu1 "  l = logout - s = suspend - r = reboot - w = poweroff  "
