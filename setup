@@ -14,6 +14,6 @@ apt-get install i3 ubuntu-drivers-common mesa-utils mesa-utils-extra gnupg scrot
 sudo chsh -s $(which zsh)
 
 mkdir ~/downloads
-wget "https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb" -O "~/downloads/chrome.deb"
-sudo dpkg -i '~/downloads/chrome.deb'
+wget "https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb" -O ~/downloads/chrome.deb
+sudo dpkg -i ~/downloads/chrome.deb
 sudo apt install -f
