@@ -9,7 +9,9 @@
 
 echo 'Setting up'
 
-apt-get install i3 ubuntu-drivers-common mesa-utils mesa-utils-extra gnupg scrot xorg xserver-xorg wget unzip wpasupplicant
+apt-get install i3 ubuntu-drivers-common mesa-utils mesa-utils-extra gnupg scrot xorg xserver-xorg wget unzip wpasupplicant fonts-hack-ttf zsh
+
+sudo chsh -s $(which zsh)
 
 wget "https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb"
 sudo dpkg -i google-chrome-stable_current_amd64.deb
