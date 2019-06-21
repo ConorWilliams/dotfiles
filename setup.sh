@@ -20,6 +20,7 @@ apt install i3 ubuntu-drivers-common mesa-utils mesa-utils-extra gnupg scrot xor
 # alacritty
 add-apt-repository ppa:mmstick76/alacritty
 apt install alacritty
+
 mkdir ~/.config/alacritty
 ln -s ~/.dotfiles/alacritty/alacritty.yml ~/.config/alacritty/alacritty.yml
 
