@@ -76,6 +76,6 @@ fi
 sudo mkdir /etc/systemd/system/getty@tty1.service.d
 sudo cp ~/.dotfiles/X/override.conf /etc/systemd/system/getty@tty1.service.d/override.conf
 
-sudo chmod u+rw -R ~/*
+sudo chmod 755 -R ~/
 
 echo 'Done'
