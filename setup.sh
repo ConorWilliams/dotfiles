@@ -24,7 +24,7 @@ cp ~/.dotfiles/bash/.bash_profile ~/.bash_profile
 cp ~/.dotfiles/zsh/.zshrc ~/.zshrc
 cp ~/.dotfiles/X/.xinitrc ~/.xinitrc
 
-# chsh -s /usr/bin/zsh
+chsh -s /usr/bin/zsh
 
 # set up i3
 mkdir ~/.i3/
