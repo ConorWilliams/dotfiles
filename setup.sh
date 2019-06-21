@@ -17,6 +17,8 @@ apt install i3 ubuntu-drivers-common mesa-utils mesa-utils-extra gnupg scrot xor
 apt-get update
 apt-get upgrade
 
+read -p "Press enter to continue"
+
 #texlive-full
 
 # alacritty
@@ -25,6 +27,8 @@ apt install alacritty
 
 mkdir ~/.config/alacritty
 ln -s ~/.dotfiles/alacritty/alacritty.yml ~/.config/alacritty/alacritty.yml
+
+read -p "Press enter to continue"
 
 # set up zsh
 git clone https://github.com/robbyrussell/oh-my-zsh.git ~/.oh-my-zsh
@@ -37,12 +41,18 @@ ln -s ~/.dotfiles/zsh/.zshrc ~/.zshrc
 chsh -s $(which zsh)
 sudo chsh -s $(which zsh)
 
+read -p "Press enter to continue"
+
 # python
 pip3 install numpy scipy ujson clint halo tqdm
 pip3 install git+https://github.com/ConorWilliams/rsinc
 
+read -p "Press enter to continue"
+
 # rclone
 curl https://rclone.org/install.sh | sudo bash -s beta
+
+read -p "Press enter to continue"
 
 # set up i3
 mkdir ~/.config/i3
@@ -56,6 +66,8 @@ ln -s ~/.dotfiles/imwheel/.imwheelrc ~/.imwheelrc
 mkdir ~/.config/zathura
 ln -s ~/.dotfiles/zathura/zathurarc ~/.config/zathura/zathurarc
 
+read -p "Press enter to continue"
+
 # install chrome
 mkdir ~/downloads
 wget "https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb" -O ~/downloads/chrome.deb
@@ -67,3 +79,5 @@ sudo apt install -f
 # ln -s ~/.dotfiles/X/.override.conf /etc/systemd/system/getty@tty1.service.d/override.conf
 
 chmod u+rw -R ~/*
+
+ech0 'Done'
