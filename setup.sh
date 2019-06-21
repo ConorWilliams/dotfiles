@@ -31,15 +31,15 @@ git clone https://github.com/robbyrussell/oh-my-zsh.git ~/.oh-my-zsh
 git clone https://github.com/zsh-users/zsh-autosuggestions ~/.oh-my-zsh/custom/plugins/zsh-autosuggestions
 git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ~/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting
 
-# python
-pip3 install numpy scipy ujson clint halo tqdm
-pip3 install git+https://github.com/ConorWilliams/rsinc
-
 ln -s ~/.dotfiles/zsh/.zprofile ~/.zprofile
 ln -s ~/.dotfiles/zsh/.zshrc ~/.zshrc
 
-chsh -s $(which zsh) root
-chsh -s $(which zsh) $USER
+chsh -s $(which zsh)
+sudo chsh -s $(which zsh)
+
+# python
+pip3 install numpy scipy ujson clint halo tqdm
+pip3 install git+https://github.com/ConorWilliams/rsinc
 
 # set up i3
 mkdir ~/.config/i3
@@ -50,7 +50,6 @@ ln -s ~/.dotfiles/X/.xinitrc ~/.xinitrc
 ln -s ~/.dotfiles/imwheel/.imwheelrc ~/.imwheelrc
 
 # set up zathura
-
 mkdir ~/.config/zathura
 ln -s ~/.dotfiles/zathura/zathurarc ~/.config/zathura/zathurarc
 
@@ -60,7 +59,4 @@ wget "https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb"
 sudo dpkg -i ~/downloads/chrome.deb
 sudo apt install -f
 
-apt-get update
-apt-get upgrade
-
-
+chmod ~/../* u+rw -R 
