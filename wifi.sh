@@ -1,3 +1,3 @@
 #!/bin/bash
 
-apt install wireless-tools
+apt install wireless-tools rfkill
