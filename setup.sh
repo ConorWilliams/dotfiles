@@ -15,7 +15,9 @@ apt-get update
 apt-get upgrade
 
 # install a bunch of stuff
-#apt install i3 ubuntu-drivers-common mesa-utils mesa-utils-extra gnupg scrot xorg xserver-xorg wget unzip wpasupplicant fonts-hack-ttf zsh lxterminal rofi ranger i3lock redshift alsa-utils alsa-base alsa-tools i3blocks xbacklight cmus thunderbird blueman x11-xserver-utils arandr pulseaudio acpi ranger pavucontrol vim unicode python-pip python3-pip texlive-full zathura software-properties-common network-manager-gnome
+apt install i3 ubuntu-drivers-common mesa-utils mesa-utils-extra gnupg scrot xorg xserver-xorg wget unzip wpasupplicant fonts-hack-ttf zsh lxterminal rofi ranger i3lock redshift alsa-utils alsa-base alsa-tools i3blocks xbacklight cmus thunderbird blueman x11-xserver-utils arandr pulseaudio acpi ranger pavucontrol vim unicode python-pip python3-pip zathura software-properties-common golang-go
+
+#texlive-full
 
 # alacritty
 add-apt-repository ppa:mmstick76/alacritty
@@ -30,7 +32,8 @@ git clone https://github.com/zsh-users/zsh-autosuggestions ~/.oh-my-zsh/custom/p
 git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ~/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting
 
 # python
-pip3 install numpy scipy git+https://github.com/ConorWilliams/rsinc/tree/master/rsinc
+pip3 install numpy scipy ujson clint halo tqdm
+pip3 install git+https://github.com/ConorWilliams/rsinc
 
 ln -s ~/.dotfiles/zsh/.zprofile ~/.zprofile
 ln -s ~/.dotfiles/zsh/.zshrc ~/.zshrc
