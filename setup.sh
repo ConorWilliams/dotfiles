@@ -38,6 +38,16 @@ wget "https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb"
 sudo dpkg -i ~/downloads/chrome.deb
 sudo apt install -f
 
+# font awesome
+wget "https://use.fontawesome.com/releases/v5.0.13/fontawesome-free-5.0.13.zip" -O ~/downloads/awesome.zip
+unzip ~/downloads/awesome.zip
+sudo cp ~/downloads/awesome/use-on-desktop/* /usr/local/share/fonts/
+fc-cache -f -v
+#the next command help see the name to use
+#here Font Awesome 5 Free
+echo 'grepping...'
+fc-list | grep -i "awe"
+
 apt-get update
 apt-get upgrade
 
