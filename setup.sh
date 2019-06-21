@@ -15,7 +15,7 @@ apt-get update
 apt-get upgrade
 
 # install a bunch of stuff
-sudo apt-get install i3 ubuntu-drivers-common mesa-utils mesa-utils-extra gnupg scrot xorg xserver-xorg wget unzip wpasupplicant fonts-hack-ttf zsh lxterminal rofi ranger i3lock redshift-gtk alsa-utils alsa-base alsa-tools i3blocks xbacklight cmus thunderbird blueman bluez bluetooth x11-xserver-utils arandr pulseaudio acpi ranger pavucontrol vim unicode python-pip python3-pip zathura software-properties-common golang-go pcmanfm lxtask bc zip snapd curl
+sudo apt-get install i3 ubuntu-drivers-common mesa-utils mesa-utils-extra gnupg scrot xorg xserver-xorg wget unzip wpasupplicant fonts-hack-ttf zsh lxterminal rofi ranger i3lock redshift-gtk alsa-utils alsa-base alsa-tools i3blocks xbacklight cmus thunderbird blueman bluez bluetooth x11-xserver-utils arandr pulseaudio acpi ranger pavucontrol vim unicode python-pip python3-pip zathura software-properties-common golang-go pcmanfm lxtask bc zip snapd curl vlc ubuntu-restricted-addons ubuntu-restricted-extras
 
 read -p "Press enter to continue"
 
@@ -76,6 +76,6 @@ fi
 sudo mkdir /etc/systemd/system/getty@tty1.service.d
 sudo cp ~/.dotfiles/X/override.conf /etc/systemd/system/getty@tty1.service.d/override.conf
 
-sudo chmod 755 -R ~/
+chown -R conor ~/*
 
 echo 'Done'
