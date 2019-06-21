@@ -24,15 +24,13 @@ cp ~/.dotfiles/bash/.bash_profile ~/.bash_profile
 cp ~/.dotfiles/zsh/.zshrc ~/.zshrc
 cp ~/.dotfiles/X/.xinitrc ~/.xinitrc
 
-# zsh
-
-# chsh -s /usr/bin/zsh root
+chsh -s /usr/bin/zsh
 
 # set up i3
 mkdir ~/.i3/
 cp ~/.dotfiles/i3/config ~/.i3/config
 
-cp ~/.dotfiles/imwheelrc/.imwheelrc ~/.imwheelrc
+cp ~/.dotfiles/imwheel/.imwheelrc ~/.imwheelrc
 
 # install chrome
 mkdir ~/downloads
