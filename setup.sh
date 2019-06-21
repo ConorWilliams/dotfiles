@@ -20,17 +20,16 @@ git clone https://github.com/robbyrussell/oh-my-zsh.git ~/.oh-my-zsh
 git clone https://github.com/zsh-users/zsh-autosuggestions ~/.oh-my-zsh/custom/plugins/zsh-autosuggestions
 git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ~/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting
 
-cp ~/.dotfiles/bash/.bash_profile ~/.bash_profile
-cp ~/.dotfiles/zsh/.zshrc ~/.zshrc
-cp ~/.dotfiles/X/.xinitrc ~/.xinitrc
+ln -s ~/.dotfiles/bash/.bash_profile ~/.bash_profile
+ln -s ~/.dotfiles/zsh/.zshrc ~/.zshrc
+ln -s ~/.dotfiles/X/.xinitrc ~/.xinitrc
 
 chsh -s /usr/bin/zsh
 
 # set up i3
 mkdir ~/.i3/
-cp ~/.dotfiles/i3/config ~/.i3/config
-
-cp ~/.dotfiles/imwheel/.imwheelrc ~/.imwheelrc
+ln -s ~/.dotfiles/i3/config ~/.i3/config
+ln -s ~/.dotfiles/imwheel/.imwheelrc ~/.imwheelrc
 
 # install chrome
 mkdir ~/downloads
