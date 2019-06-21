@@ -9,11 +9,19 @@
 
 echo 'Setting up'
 
+mkdir ~/.config
+
 apt-get update
 apt-get upgrade
 
 # install a bunch of stuff
 apt install i3 ubuntu-drivers-common mesa-utils mesa-utils-extra gnupg scrot xorg xserver-xorg wget unzip wpasupplicant fonts-hack-ttf zsh lxterminal rofi ranger i3lock redshift alsa-utils alsa-base alsa-tools i3blocks xbacklight cmus thunderbird blueman x11-xserver-utils arandr pulseaudio acpi ranger pavucontrol vim unicode python-pip python3-pip texlive-full zathura software-properties-common
+
+# alacritty
+add-apt-repository ppa:mmstick76/alacritty
+apt install alacritty
+mkdir ~/.config/alacritty
+ln -s ~/.dotfiles/alacritty/alacritty.yml ~/.config/alacritty/alacritty.yml
 
 # set up zsh
 git clone https://github.com/robbyrussell/oh-my-zsh.git ~/.oh-my-zsh
@@ -27,15 +35,15 @@ chsh -s $(which zsh) root
 chsh -s $(which zsh) $USER
 
 # set up i3
-mkdir ~/.i3/
-ln -s ~/.dotfiles/i3/config ~/.i3/config
+mkdir ~/.config/i3
+ln -s ~/.dotfiles/i3/config ~/.config/i3/config
 
 # other
 ln -s ~/.dotfiles/X/.xinitrc ~/.xinitrc
 ln -s ~/.dotfiles/imwheel/.imwheelrc ~/.imwheelrc
 
 # set up zathura
-mkdir ~/.config
+
 mkdir ~/.config/zathura
 ln -s ~/.dotfiles/zathura/zathurarc ~/.config/zathura/zathurarc
 
