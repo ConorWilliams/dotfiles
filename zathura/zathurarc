@@ -1,0 +1,7 @@
+#set show-v-scrollbar true
+
+set selection-clipboard clipboard
+set smooth-scroll "true"
+
+map J scroll half-down
+map K scroll half-up
