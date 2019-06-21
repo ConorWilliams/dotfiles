@@ -20,11 +20,12 @@ git clone https://github.com/robbyrussell/oh-my-zsh.git ~/.oh-my-zsh
 git clone https://github.com/zsh-users/zsh-autosuggestions ~/.oh-my-zsh/custom/plugins/zsh-autosuggestions
 git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ~/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting
 
-ln -s ~/.dotfiles/bash/.bash_profile ~/.bash_profile
+ln -s ~/.dotfiles/zsh/.zprofile ~/.zprofile
 ln -s ~/.dotfiles/zsh/.zshrc ~/.zshrc
 ln -s ~/.dotfiles/X/.xinitrc ~/.xinitrc
 
-chsh -s /usr/bin/zsh
+chsh -s $(which zsh) root
+chsh -s $(which zsh) $USER
 
 # set up i3
 mkdir ~/.i3/
