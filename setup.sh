@@ -17,9 +17,6 @@ apt-get upgrade
 # install a bunch of stuff
 sudo apt-get install i3 ubuntu-drivers-common mesa-utils mesa-utils-extra gnupg scrot xorg xserver-xorg wget unzip wpasupplicant fonts-hack-ttf zsh lxterminal rofi ranger i3lock redshift-gtk alsa-utils alsa-base alsa-tools i3blocks xbacklight cmus thunderbird blueman bluez bluetooth x11-xserver-utils arandr pulseaudio acpi ranger pavucontrol vim unicode python-pip python3-pip zathura software-properties-common golang-go pcmanfm lxtask bc zip snapd curl
 
-apt-get update
-apt-get upgrade
-
 read -p "Press enter to continue"
 
 #texlive-full
@@ -30,8 +27,6 @@ apt install alacritty
 
 mkdir ~/.config/alacritty
 ln -s ~/.dotfiles/alacritty/alacritty.yml ~/.config/alacritty/alacritty.yml
-
-read -p "Press enter to continue"
 
 # set up zsh
 git clone https://github.com/robbyrussell/oh-my-zsh.git ~/.oh-my-zsh
@@ -50,12 +45,8 @@ read -p "Press enter to continue"
 pip3 install numpy scipy ujson clint halo tqdm
 pip3 install git+https://github.com/ConorWilliams/rsinc
 
-read -p "Press enter to continue"
-
 # rclone
 curl https://rclone.org/install.sh | sudo bash -s beta
-
-read -p "Press enter to continue"
 
 # set up i3
 mkdir ~/.config/i3
@@ -69,13 +60,17 @@ ln -s ~/.dotfiles/imwheel/.imwheelrc ~/.imwheelrc
 mkdir ~/.config/zathura
 ln -s ~/.dotfiles/zathura/zathurarc ~/.config/zathura/zathurarc
 
-read -p "Press enter to continue"
-
 # install chrome
-mkdir ~/downloads
-wget "https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb" -O ~/downloads/chrome.deb
-sudo dpkg -i ~/downloads/chrome.deb
-sudo apt install -f
+read -p "Download chrome .deb (y/n)?" CONT
+if [ "$CONT" = "y" ]; then
+  mkdir ~/downloads
+  wget "https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb" -O ~/downloads/chrome.deb
+  sudo dpkg -i ~/downloads/chrome.deb
+  sudo apt install -f
+else
+  echo "no chrome";
+fi
+
 
 autologin
 sudo mkdir /etc/systemd/system/getty@tty1.service.d
@@ -83,4 +78,4 @@ sudo cp ~/.dotfiles/X/.override.conf /etc/systemd/system/getty@tty1.service.d/ov
 
 sudo chmod u+rw -R ~/*
 
-ech0 'Done'
+echo 'Done'
