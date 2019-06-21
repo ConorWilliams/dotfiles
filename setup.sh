@@ -41,6 +41,13 @@ sudo chsh -s $(which zsh)
 pip3 install numpy scipy ujson clint halo tqdm
 pip3 install git+https://github.com/ConorWilliams/rsinc
 
+# rclone
+git clone https://github.com/ncw/rclone.git ~/rclone
+cd ~/rclone
+go build
+ln -s ~/rclone/rclone /usr/local/bin/rclone
+cd ~/
+
 # set up i3
 mkdir ~/.config/i3
 ln -s ~/.dotfiles/i3/config ~/.config/i3/config
