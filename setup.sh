@@ -77,10 +77,10 @@ wget "https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb"
 sudo dpkg -i ~/downloads/chrome.deb
 sudo apt install -f
 
-# autologin
-# mkdir /etc/systemd/system/getty@tty1.service.d
-# ln -s ~/.dotfiles/X/.override.conf /etc/systemd/system/getty@tty1.service.d/override.conf
+autologin
+sudo mkdir /etc/systemd/system/getty@tty1.service.d
+sudo cp ~/.dotfiles/X/.override.conf /etc/systemd/system/getty@tty1.service.d/override.conf
 
-chmod u+rw -R ~/*
+sudo chmod u+rw -R ~/*
 
 ech0 'Done'
