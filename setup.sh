@@ -11,11 +11,11 @@ echo 'Setting up'
 
 mkdir ~/.config
 
+# install a bunch of stuff
+apt install i3 ubuntu-drivers-common mesa-utils mesa-utils-extra gnupg scrot xorg xserver-xorg wget unzip wpasupplicant fonts-hack-ttf zsh lxterminal rofi ranger i3lock redshift-gtk alsa-utils alsa-base alsa-tools i3blocks xbacklight cmus thunderbird blueman bluez-utils bluez bluetooth x11-xserver-utils arandr pulseaudio acpi ranger pavucontrol vim unicode python-pip python3-pip zathura software-properties-common golang-go pcmanfm lxtask bc zip snapd curl
+
 apt-get update
 apt-get upgrade
-
-# install a bunch of stuff
-apt install i3 ubuntu-drivers-common mesa-utils mesa-utils-extra gnupg scrot xorg xserver-xorg wget unzip wpasupplicant fonts-hack-ttf zsh lxterminal rofi ranger i3lock redshift-gtk alsa-utils alsa-base alsa-tools i3blocks xbacklight cmus thunderbird blueman bluez-utils bluez bluetooth x11-xserver-utils arandr pulseaudio acpi ranger pavucontrol vim unicode python-pip python3-pip zathura software-properties-common golang-go pcmanfm lxtask bc xserver-xorg-input-all xserver-xorg-video-all zip snapd xkb-data curl
 
 #texlive-full
 
@@ -63,7 +63,7 @@ sudo dpkg -i ~/downloads/chrome.deb
 sudo apt install -f
 
 # autologin
-mkdir /etc/systemd/system/getty@tty1.service.d
-ln -s ~/.dotfiles/X/.override.conf /etc/systemd/system/getty@tty1.service.d/override.conf
+# mkdir /etc/systemd/system/getty@tty1.service.d
+# ln -s ~/.dotfiles/X/.override.conf /etc/systemd/system/getty@tty1.service.d/override.conf
 
 chmod u+rw -R ~/*
