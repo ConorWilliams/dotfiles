@@ -15,7 +15,7 @@ apt-get update
 apt-get upgrade
 
 # install a bunch of stuff
-apt install i3 ubuntu-drivers-common mesa-utils mesa-utils-extra gnupg scrot xorg xserver-xorg wget unzip wpasupplicant fonts-hack-ttf zsh lxterminal rofi ranger i3lock redshift-gtk alsa-utils alsa-base alsa-tools i3blocks xbacklight cmus thunderbird blueman bluez-utils bluez bluetooth x11-xserver-utils arandr pulseaudio acpi ranger pavucontrol vim unicode python-pip python3-pip zathura software-properties-common golang-go pcmanfm lxtask lubuntu-core bc xserver-xorg-input-all xserver-xorg-video-all zip snapd xkb-data
+apt install i3 ubuntu-drivers-common mesa-utils mesa-utils-extra gnupg scrot xorg xserver-xorg wget unzip wpasupplicant fonts-hack-ttf zsh lxterminal rofi ranger i3lock redshift-gtk alsa-utils alsa-base alsa-tools i3blocks xbacklight cmus thunderbird blueman bluez-utils bluez bluetooth x11-xserver-utils arandr pulseaudio acpi ranger pavucontrol vim unicode python-pip python3-pip zathura software-properties-common golang-go pcmanfm lxtask bc xserver-xorg-input-all xserver-xorg-video-all zip snapd xkb-data curl
 
 #texlive-full
 
@@ -42,11 +42,7 @@ pip3 install numpy scipy ujson clint halo tqdm
 pip3 install git+https://github.com/ConorWilliams/rsinc
 
 # rclone
-git clone https://github.com/ncw/rclone.git ~/rclone
-cd ~/rclone
-go build
-ln -s ~/rclone/rclone /usr/local/bin/rclone
-cd ~/
+curl https://rclone.org/install.sh | sudo bash -s beta
 
 # set up i3
 mkdir ~/.config/i3
@@ -65,5 +61,9 @@ mkdir ~/downloads
 wget "https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb" -O ~/downloads/chrome.deb
 sudo dpkg -i ~/downloads/chrome.deb
 sudo apt install -f
+
+# autologin
+mkdir /etc/systemd/system/getty@tty1.service.d
+ln -s ~/.dotfiles/X/.override.conf /etc/systemd/system/getty@tty1.service.d/override.conf
 
 chmod u+rw -R ~/*
