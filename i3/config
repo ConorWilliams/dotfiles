@@ -28,7 +28,7 @@ bindsym $mod+Shift+q kill
 # start rofi (a program launcher)
 bindsym $mod+d exec --no-startup-id rofi -show run -config /home/conor/.dotfiles/rofi/config
 
-# bindsym $mod+t exec subl
+bindsym $mod+t exec subl
 bindsym $mod+g exec google-chrome
 bindsym $mod+o exec x-terminal-emulator --command=ranger -t ranger
 bindsym $mod+p exec scrot -q 100 -e 'mv $f ~/Pictures/Scrot/'
