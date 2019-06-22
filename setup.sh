@@ -15,7 +15,7 @@ apt-get update
 apt-get upgrade
 
 # install a bunch of base stuff
-apt-get install i3 ubuntu-drivers-common mesa-utils mesa-utils-extra gnupg scrot xorg xserver-xorg wget unzip wpasupplicant fonts-hack-ttf zsh lxterminal rofi ranger i3lock redshift-gtk alsa-utils alsa-base alsa-tools i3blocks xbacklight cmus thunderbird blueman bluez bluetooth x11-xserver-utils arandr pulseaudio acpi ranger pavucontrol vim unicode python-pip python3-pip zathura software-properties-common golang-go pcmanfm lxtask bc zip snapd curl vlc ubuntu-restricted-addons ubuntu-restricted-extras qdirstat feh gthumb lxappearance arc-theme network-manager-gnome network-manager wireless-tools pulseaudio-module-bluetooth
+apt-get install i3 ubuntu-drivers-common mesa-utils mesa-utils-extra gnupg scrot xorg xserver-xorg wget unzip wpasupplicant fonts-hack-ttf zsh lxterminal rofi ranger i3lock redshift-gtk alsa-utils alsa-base alsa-tools i3blocks xbacklight cmus thunderbird blueman bluez bluetooth x11-xserver-utils arandr pulseaudio acpi ranger pavucontrol vim unicode python-pip python3-pip zathura software-properties-common golang-go pcmanfm lxtask bc zip snapd curl vlc ubuntu-restricted-addons ubuntu-restricted-extras qdirstat feh gthumb lxappearance arc-theme network-manager-gnome network-manager wireless-tools pulseaudio-module-bluetooth tlp
 
 #texlive-full
 
@@ -35,9 +35,6 @@ git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ~/.oh-my-zsh/
 
 ln -s ~/.dotfiles/zsh/.zprofile ~/.zprofile
 ln -s ~/.dotfiles/zsh/.zshrc ~/.zshrc
-
-# chsh -s $(which zsh)
-# sudo chsh -s $(which zsh)
 
 read -p "Press enter to continue"
 
@@ -87,14 +84,22 @@ else
   echo "no chrome";
 fi
   
-  
-
-
 # autologin
 mkdir /etc/systemd/system/getty@tty1.service.d
 cp ~/.dotfiles/X/override.conf /etc/systemd/system/getty@tty1.service.d/override.conf
 
-chown -R conor ~/
-chown -R conor ~/*
+# Permissions
+chown conor:conor -R /home/conor/
+chown conor:conor -R /home/conor/*
+chmod g+s /home/conor/
 
-echo 'Done'
+echo '# Now you just need to:
+# 
+# chsh -s $(which zsh)
+# sudo chsh -s $(which zsh)
+# 
+# set /etc/default/grub GRUB_CMDLINE_LINUX_DEFAULT="quiet splash"
+# sudo update-grub
+# 
+# set paper + arc themes with lxappearance '
+
