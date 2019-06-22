@@ -22,7 +22,7 @@ apt install -y wget unzip software-properties-common unicode bc zip snapd curl a
 
 apt install -y gnupg mesa-utils mesa-utils-extra xorg xserver-xorg x11-xserver-utils
 
-apt install -y python-pip python3-pip   golang-go
+apt install -y python-pip python3-pip golang-go
 
 apt install -y i3 i3lock i3blocks
 
@@ -40,8 +40,7 @@ apt install -y wireless-tools network-manager wpasupplicant network-manager-gnom
 
 apt install -y tlp
 
-
-#texlive-full network-manager-gnome 
+#texlive-full
 
 read -p "Press enter to continue"
 
@@ -59,8 +58,6 @@ git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ~/.oh-my-zsh/
 
 ln -s ~/.dotfiles/zsh/.zprofile ~/.zprofile
 ln -s ~/.dotfiles/zsh/.zshrc ~/.zshrc
-
-read -p "Press enter to continue"
 
 # python
 pip3 install numpy scipy ujson clint halo tqdm
@@ -119,11 +116,5 @@ chown conor:conor -R /home/conor/
 chown conor:conor -R /home/conor/*
 chmod g+s /home/conor/
 
-echo '# Now you just need to:
-# 
-# 
-# set /etc/default/grub GRUB_CMDLINE_LINUX_DEFAULT="quiet splash"
-# sudo update-grub
-# 
-# set paper + arc themes with lxappearance '
+echo 'Now you just need to set paper + arc themes with lxappearance '
 
