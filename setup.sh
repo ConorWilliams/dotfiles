@@ -9,7 +9,9 @@
 
 echo 'Setting up'
 
-mkdir ~/.config
+
+ln -s ~/.dotfiles/ ~/.config/ 
+mkdir ~/downloads
 
 apt-get update
 apt-get upgrade
@@ -25,8 +27,8 @@ read -p "Press enter to continue"
 add-apt-repository ppa:mmstick76/alacritty
 apt install alacritty
 
-mkdir ~/.config/alacritty
-ln -s ~/.dotfiles/alacritty/alacritty.yml ~/.config/alacritty/alacritty.yml
+# mkdir ~/.config/alacritty
+# ln -s ~/.dotfiles/alacritty/alacritty.yml ~/.config/alacritty/alacritty.yml
 
 # set up zsh
 git clone https://github.com/robbyrussell/oh-my-zsh.git ~/.oh-my-zsh
@@ -51,21 +53,20 @@ sudo apt-get update
 sudo apt-get install paper-icon-theme
 
 # set up i3
-mkdir ~/.config/i3
-ln -s ~/.dotfiles/i3/config ~/.config/i3/config
+# mkdir ~/.config/i3
+# ln -s ~/.dotfiles/i3/config ~/.config/i3/config
 
 # other
 ln -s ~/.dotfiles/X/.xinitrc ~/.xinitrc
 ln -s ~/.dotfiles/imwheel/.imwheelrc ~/.imwheelrc
 
 # set up zathura
-mkdir ~/.config/zathura
-ln -s ~/.dotfiles/zathura/zathurarc ~/.config/zathura/zathurarc
+# mkdir ~/.config/zathura
+# ln -s ~/.dotfiles/zathura/zathurarc ~/.config/zathura/zathurarc
 
 # install chrome
 read -p "Download chrome .deb (y/n)?" CONT
 if [ "$CONT" = "y" ]; then
-  mkdir ~/downloads
   wget "https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb" -O ~/downloads/chrome.deb
   dpkg -i ~/downloads/chrome.deb
   apt install -f
@@ -76,7 +77,6 @@ fi
 # install atom
 read -p "Download atom .deb (y/n)?" CONT
 if [ "$CONT" = "y" ]; then
-  mkdir ~/downloads
   wget "https://atom.io/download/deb" -O ~/downloads/atom.deb
   dpkg -i ~/downloads/atom.deb
   apt install -f
