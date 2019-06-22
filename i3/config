@@ -30,7 +30,7 @@ bindsym $mod+d exec --no-startup-id rofi -show run -config /home/conor/.dotfiles
 
 bindsym $mod+t exec subl
 bindsym $mod+g exec google-chrome
-bindsym $mod+o exec x-terminal-emulator --command=ranger -t ranger
+bindsym $mod+o exec lxterminal --command=ranger -t ranger
 bindsym $mod+p exec scrot -q 100 -e 'mv $f ~/Pictures/Scrot/'
 bindsym $mod+n exec i3lock -d -c000000
 
