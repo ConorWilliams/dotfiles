@@ -15,8 +15,31 @@ mkdir ~/downloads
 apt-get update
 apt-get upgrade
 
-# install a bunch of base stuff
-apt-get install i3 ubuntu-drivers-common mesa-utils mesa-utils-extra gnupg scrot xorg xserver-xorg wget unzip wpasupplicant fonts-hack-ttf zsh lxterminal rofi ranger i3lock redshift-gtk alsa-utils alsa-base alsa-tools i3blocks xbacklight cmus thunderbird blueman bluez bluetooth x11-xserver-utils arandr pulseaudio acpi ranger pavucontrol vim unicode python-pip python3-pip zathura software-properties-common golang-go pcmanfm lxtask bc zip snapd curl vlc ubuntu-restricted-addons ubuntu-restricted-extras qdirstat feh gthumb lxappearance arc-theme wireless-tools network-manager pulseaudio-module-bluetooth tlp
+# install a bunch of base stuff                
+apt install -y ubuntu-drivers-common lubuntu-restricted-extras lubuntu-restricted-addons 
+
+apt install -y wget unzip software-properties-common unicode bc zip snapd curl acpi
+
+apt install -y gnupg mesa-utils mesa-utils-extra xorg xserver-xorg x11-xserver-utils
+
+apt install -y python-pip python3-pip   golang-go
+
+apt install -y i3 i3lock i3blocks
+
+apt install -y alsa-base alsa-utils alsa-tools arandr pulseaudio pavucontrol pulseaudio-module-bluetooth
+
+apt install -y scrot zsh rofi ranger redshift-gtk xbacklight cmus feh
+
+apt install -y qdirstat gthumb vlc lxterminal thunderbird vim zathura pcmanfm lxtask 
+
+apt install -y lxappearance arc-theme fonts-hack-ttf
+
+apt install -y blueman bluez bluetooth
+
+apt install -y wireless-tools network-manager wpasupplicant network-manager-gnome
+
+apt install -y tlp
+
 
 #texlive-full network-manager-gnome 
 
