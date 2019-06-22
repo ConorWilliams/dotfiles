@@ -10,6 +10,7 @@
 # Please see https://i3wm.org/docs/userguide.html for a complete reference!
 
 set $mod Mod4
+set $term alacritty
 
 # Font for window titles. Will also be used by the bar unless a different font
 # is used in the bar {} block below.
@@ -20,7 +21,7 @@ font pango:Hack Regular 10
 floating_modifier $mod
 
 # start a terminal
-bindsym $mod+Return exec --no-startup-id lxterminal
+bindsym $mod+Return exec --no-startup-id $term
 
 # kill focused window
 bindsym $mod+Shift+q kill
@@ -30,7 +31,7 @@ bindsym $mod+d exec --no-startup-id rofi -show run -config /home/conor/.dotfiles
 
 bindsym $mod+t exec subl
 bindsym $mod+g exec google-chrome
-bindsym $mod+o exec lxterminal --command=ranger -t ranger
+bindsym $mod+o exec $term --command=ranger -t ranger
 bindsym $mod+p exec scrot -q 100 -e 'mv $f ~/Pictures/Scrot/'
 bindsym $mod+n exec i3lock -d -c000000
 
@@ -168,7 +169,7 @@ exec_always --no-startup-id feh --bg-scale ~/.dotfiles/wall/jump.jpg
 
 exec --no-startup-id blueman-applet
 
-exec --no-startup-id exec lxterminal --command=cmus -t cmus
+exec --no-startup-id exec $term --command=cmus -t cmus
 
 exec --no-startup-id exec thunderbird
 

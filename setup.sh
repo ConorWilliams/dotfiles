@@ -21,12 +21,12 @@ apt-get install i3 ubuntu-drivers-common mesa-utils mesa-utils-extra gnupg scrot
 
 read -p "Press enter to continue"
 
-# # alacritty
-# add-apt-repository ppa:mmstick76/alacritty
-# apt install alacritty
+# alacritty
+add-apt-repository ppa:mmstick76/alacritty
+apt install alacritty
 
-# mkdir ~/.config/alacritty
-# ln -s ~/.dotfiles/alacritty/alacritty.yml ~/.config/alacritty/alacritty.yml
+mkdir ~/.config/alacritty
+ln -s ~/.dotfiles/alacritty/alacritty.yml ~/.config/alacritty/alacritty.yml
 
 # set up zsh
 git clone https://github.com/robbyrussell/oh-my-zsh.git ~/.oh-my-zsh
