@@ -96,6 +96,7 @@ fi
 # install atom
 read -p "Download atom .deb (y/n)?" CONT
 if [ "$CONT" = "y" ]; then
+  ln -s ~/.dotfiles/atom/ ~/.atom/
   wget "https://atom.io/download/deb" -O ~/downloads/atom.deb
   dpkg -i ~/downloads/atom.deb
   apt install -f
