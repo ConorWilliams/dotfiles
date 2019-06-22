@@ -83,7 +83,7 @@ else
   echo "no chrome";
 fi
   
-# autologin
+# auto-login
 mkdir /etc/systemd/system/getty@tty1.service.d
 cp ~/.dotfiles/X/override.conf /etc/systemd/system/getty@tty1.service.d/override.conf
 
