@@ -14,8 +14,8 @@ mkdir ~/.config
 apt-get update
 apt-get upgrade
 
-# install a bunch of stuff
-apt-get install i3 ubuntu-drivers-common mesa-utils mesa-utils-extra gnupg scrot xorg xserver-xorg wget unzip wpasupplicant fonts-hack-ttf zsh lxterminal rofi ranger i3lock redshift-gtk alsa-utils alsa-base alsa-tools i3blocks xbacklight cmus thunderbird blueman bluez bluetooth x11-xserver-utils arandr pulseaudio acpi ranger pavucontrol vim unicode python-pip python3-pip zathura software-properties-common golang-go pcmanfm lxtask bc zip snapd curl vlc ubuntu-restricted-addons ubuntu-restricted-extras qdirstat feh gthumb
+# install a bunch of base stuff
+apt-get install i3 ubuntu-drivers-common mesa-utils mesa-utils-extra gnupg scrot xorg xserver-xorg wget unzip wpasupplicant fonts-hack-ttf zsh lxterminal rofi ranger i3lock redshift-gtk alsa-utils alsa-base alsa-tools i3blocks xbacklight cmus thunderbird blueman bluez bluetooth x11-xserver-utils arandr pulseaudio acpi ranger pavucontrol vim unicode python-pip python3-pip zathura software-properties-common golang-go pcmanfm lxtask bc zip snapd curl vlc ubuntu-restricted-addons ubuntu-restricted-extras qdirstat feh gthumb lxappearance arc-theme
 
 #texlive-full
 
@@ -48,6 +48,11 @@ pip3 install git+https://github.com/ConorWilliams/rsinc
 # rclone
 curl https://rclone.org/install.sh | bash -s beta
 
+# paper icons
+sudo add-apt-repository ppa:snwh/pulp
+sudo apt-get update
+sudo apt-get install paper-icon-theme
+
 # set up i3
 mkdir ~/.config/i3
 ln -s ~/.dotfiles/i3/config ~/.config/i3/config
@@ -70,6 +75,19 @@ if [ "$CONT" = "y" ]; then
 else
   echo "no chrome";
 fi
+
+# install atom
+read -p "Download chrome .deb (y/n)?" CONT
+if [ "$CONT" = "y" ]; then
+  mkdir ~/downloads
+  wget "https://atom.io/download/deb" -O ~/downloads/atom.deb
+  dpkg -i ~/downloads/atom.deb
+  apt install -f
+else
+  echo "no chrome";
+fi
+  
+  
 
 
 # autologin
