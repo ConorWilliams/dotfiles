@@ -87,6 +87,10 @@ fi
 mkdir /etc/systemd/system/getty@tty1.service.d
 cp ~/.dotfiles/X/override.conf /etc/systemd/system/getty@tty1.service.d/override.conf
 
+# change shell
+sudo -u conor chsh -s $(which zsh)
+sudo -u root chsh -s $(which zsh)
+
 # Permissions
 chown conor:conor -R /home/conor/
 chown conor:conor -R /home/conor/*
@@ -94,8 +98,6 @@ chmod g+s /home/conor/
 
 echo '# Now you just need to:
 # 
-# chsh -s $(which zsh)
-# sudo chsh -s $(which zsh)
 # 
 # set /etc/default/grub GRUB_CMDLINE_LINUX_DEFAULT="quiet splash"
 # sudo update-grub
