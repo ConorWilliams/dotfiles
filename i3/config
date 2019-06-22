@@ -20,7 +20,7 @@ font pango:Hack Regular 10
 floating_modifier $mod
 
 # start a terminal
-bindsym $mod+Return exec --no-startup-id alacritty
+bindsym $mod+Return exec --no-startup-id lxterminal
 
 # kill focused window
 bindsym $mod+Shift+q kill
@@ -168,7 +168,7 @@ exec_always --no-startup-id feh --bg-scale ~/.dotfiles/wall/jump.jpg
 
 exec --no-startup-id blueman-applet
 
-exec --no-startup-id exec alacritty --command=cmus -t cmus
+exec --no-startup-id exec lxterminal --command=cmus -t cmus
 
 exec --no-startup-id exec thunderbird
 
