@@ -1,8 +1,8 @@
 # drivers
 ubuntu-drivers-common
 software-properties-common
-lubuntu-restricted-addons 
-lubuntu-restricted-extras
+#lubuntu-restricted-addons 
+#lubuntu-restricted-extras
 gnupg
 
 mesa-utils 
