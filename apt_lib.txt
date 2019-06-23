@@ -72,6 +72,7 @@ gthumb
 vlc 
 qdirstat 
 thunderbird
+torbrowser-launcher
 
 # apps from lubuntu
 pcmanfm
