@@ -19,7 +19,7 @@ apt-get upgrade
 cat apt_lib.txt | sed '/^#/d'| xargs apt-get install -y
 
 # needs second apt-get to prevent confused dependencies
-apt-get install -y  network-manager-gnome 
+# apt-get install -y  network-manager-gnome 
 
 # alacritty
 add-apt-repository ppa:mmstick76/alacritty
