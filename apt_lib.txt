@@ -73,6 +73,7 @@ vlc
 qdirstat 
 thunderbird
 torbrowser-launcher
+qbittorrent
 
 # apps from lubuntu
 pcmanfm

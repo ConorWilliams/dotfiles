@@ -94,5 +94,8 @@ chown conor:conor -R /home/conor/
 chown conor:conor -R /home/conor/*
 chmod g+s /home/conor/
 
+apt remove snap snapd
+apt autoremove
+
 echo 'Now you just need to set paper + arc themes with lxappearance '
 
