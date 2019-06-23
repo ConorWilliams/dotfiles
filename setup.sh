@@ -16,10 +16,10 @@ apt-get update
 apt-get upgrade
 
 # install a bunch of base stuff                
-cat apt_lib.txt | sed '/^#/d'| xargs apt-get install
+cat apt_lib.txt | sed '/^#/d'| xargs apt-get install -y
 
 # needs second apt-get to prevent confused dependencies
-apt-get install network-manager-gnome 
+apt-get install -y  network-manager-gnome 
 
 # alacritty
 add-apt-repository ppa:mmstick76/alacritty
